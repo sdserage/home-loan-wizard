@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import router from './router'
+import router from './router';
 
+import {connect} from 'react-redux';
 
 class App extends Component {
   constructor(){
@@ -149,4 +150,6 @@ class App extends Component {
   }
 }
 
-export default App;
+let mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(App);
