@@ -45,7 +45,7 @@ function reducer(state = initialState, action){
     case UPDATE_PROPERTY_TYPE:
       return Object.assign({},state,{propertyType: action.payload});
     default:
-      state;
+      return state;
   }
 };
 
