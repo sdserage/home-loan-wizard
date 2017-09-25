@@ -167,4 +167,4 @@ let mapStateToProps = state => {
   };
 }
 
-export default WizardEleven;
+export default connect(mapStateToProps)(WizardEleven);
