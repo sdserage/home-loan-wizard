@@ -1,5 +1,7 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {updateProp} from '../../ducks/reducer';
 
 class WizardThree extends Component {
     render(){
@@ -12,10 +14,16 @@ class WizardThree extends Component {
                         <Link to="/wFour"><button value="rentalProperty" onClick={this.props.propToBeUsedOn}>Rental Property</button></Link>
                         <Link to="/wFour"><button value="secondaryHome" onClick={this.props.propToBeUsedOn}>Secondary Home</button></Link>
                     </div>
-                </div>           
+                </div>
             </div>
         )
     }
 }
 
-export default WizardThree; 
+let mapStateToProps = state => {
+  return {
+    propToBeUsedOn: state.propToBeUsedOn
+  };
+};
+
+export default connect(mapStateToProps,{updateProp})(WizardThree);
