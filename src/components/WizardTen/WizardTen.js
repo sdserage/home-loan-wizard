@@ -1,7 +1,7 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
-import {updateFirstName,updateLastName,updateEmail} from '../../ducks/reducer';
+import { updateFirstName,updateLastName,updateEmail} from '../../ducks/reducer';
 
 class WizardTen extends Component {
     render(){
